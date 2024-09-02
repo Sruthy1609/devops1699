@@ -1,0 +1,25 @@
+sudo dnf update
+Step 3: Install Java
+Jenkins is a Java application, so Java is a prerequisite. Install Java with the following command:
+
+sudo dnf install java-17-amazon-corretto -y
+Verify the installation with:
+
+java -version
+Step 4: Add the Jenkins Repository
+Next, add the Jenkins repository to your system with the following commands:
+
+ssudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+Import a key file from Jenkins-CI to enable installation from the package:
+
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+Step 5: Install Jenkins
+Now, install Jenkins by running:
+
+sudo dnf install jenkins -y
+Step 6: Start and Enable Jenkins
+Enable and start the Jenkins service using:
+
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
