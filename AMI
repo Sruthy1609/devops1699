@@ -1,0 +1,23 @@
+mkdir /data
+yum install httpd
+rpmquery httpd
+cd /var/www/html
+echo "This is my Laptop" > index.html
+ll
+cat index.html
+cd 
+systemctl start httpd
+systemctl status httpd
+curl http://localhost
+ip a s
+curl http:// ip of the same instance
+yum install vsftpd -y
+cd /data
+touch ashish.txt{1..10}
+ll
+
+ami through instance create select the image of other region
+cmd 
+ip address see 
+rpmquery httpd 
+httpd -v
